@@ -1,0 +1,26 @@
+OASISFormat:    0.4
+Name:           multiverse
+Version:        0.0.0
+Synopsis:       Strategy game engine with parallel universes and wormholes.
+Authors:        Siraaj Khandkar <siraaj@khandkar.net>
+License:        MIT
+BuildTools:     ocamlbuild
+
+Library multiverse
+  Path:           ./src/multiverse
+  FindlibName:    multiverse
+  Modules:        Multiverse
+  CompiledObject: byte
+
+Executable test_multiverse
+  Path:           ./tests/multiverse
+  MainIs:         test_multiverse.ml
+  Build$:         flag(tests)
+  Install:        false
+  CompiledObject: byte
+  BuildDepends:   oUnit (>= 2.0.0), multiverse
+
+Test test_multiverse
+    Command:          $test_multiverse
+    WorkingDirectory: ./tests/multiverse
+    Run$:             flag(tests)

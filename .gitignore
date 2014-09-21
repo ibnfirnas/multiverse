@@ -1,0 +1,14 @@
+# Directories
+_build/
+
+# Extensions
+*.byte
+*.mllib
+*.mldylib
+
+# Specific files
+_tags
+myocamlbuild.ml
+setup.data
+setup.log
+setup.ml
