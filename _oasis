@@ -21,6 +21,6 @@ Executable test_multiverse
   BuildDepends:   oUnit (>= 2.0.0), multiverse
 
 Test test_multiverse
-    Command:          $test_multiverse
-    WorkingDirectory: ./tests/multiverse
-    Run$:             flag(tests)
+  Command:          $test_multiverse
+  WorkingDirectory: ./tests/multiverse
+  Run$:             flag(tests)
